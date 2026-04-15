@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChandaLGx — Sanskrit Prosody Intelligence</title>
+    <meta name="description" content="ChandaLGx — The most advanced Sanskrit Chandas (meter) detection engine. Identify Anushtubh, Indravajra, Upendravajra and more with luxury-grade precision.">
+
+    <!-- Google Fonts: Premium selection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-logo">
+            <span class="nav-logo-text">ChandaLGx</span>
+            <span class="nav-logo-tag">ᛋ</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#detect">Detect</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#meters">Meters</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#detect" class="nav-btn">Analyse Verse</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+         HERO SECTION — Full-viewport cinematic
+    ═══════════════════════════════════════ -->
+    <section id="hero" class="hero">
+        <!-- Animated grid overlay -->
+        <div class="hero-grid-overlay"></div>
+
+        <!-- Floating ambient orbs -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <!-- Marquee ribbon -->
+        <div class="hero-marquee-wrap">
+            <div class="hero-marquee-track">
+                <span class="hero-marquee-item">CHANDAS · PROSODY · PINGALA · METER · VEDIC · CHANDAS · PROSODY · PINGALA · METER · VEDIC · CHANDAS · PROSODY · PINGALA · METER · VEDIC ·&nbsp;</span>
+                <span class="hero-marquee-item" aria-hidden="true">CHANDAS · PROSODY · PINGALA · METER · VEDIC · CHANDAS · PROSODY · PINGALA · METER · VEDIC · CHANDAS · PROSODY · PINGALA · METER · VEDIC ·&nbsp;</span>
+            </div>
+        </div>
+
+        <!-- Hero content -->
+        <div class="hero-content">
+            <p class="hero-eyebrow">ᛋ&nbsp;&nbsp;Sanskrit Prosody Intelligence&nbsp;&nbsp;ᛋ</p>
+            <h1 class="hero-title">
+                <span class="hero-title-line" data-reveal>Chanda</span><span class="hero-title-accent" data-reveal>LGx</span>
+            </h1>
+            <p class="hero-subtitle" data-reveal>
+                Unveil the hidden rhythms of Sanskrit verse.<br>
+                From Pingala's ancient Chandashastra — reborn in gold.
+            </p>
+            <div class="hero-actions" data-reveal>
+                <a href="#detect" class="btn-primary">
+                    <span>Begin Detection</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#meters" class="btn-ghost">Explore Meters</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">8+</span>
+                    <span class="hero-stat-label">Meters</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">∞</span>
+                    <span class="hero-stat-label">Precision</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">2500+</span>
+                    <span class="hero-stat-label">Years of Wisdom</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="scroll-cue">
+            <span>SCROLL</span>
+            <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         DETECT SECTION — Input + Results
+    ═══════════════════════════════════════ -->
+    <section id="detect" class="detect-section">
+
+        <!-- Section Header -->
+        <div class="section-header">
+            <p class="section-eyebrow">ᛋ&nbsp; Detection Engine &nbsp;ᛋ</p>
+            <h2 class="section-title">Inscribe Your Verse</h2>
+            <p class="section-sub">Enter a Sanskrit verse in transliterated or IAST format. Our engine will dissect every syllable and reveal the hidden meter within.</p>
+        </div>
+
+        <!-- Luxury Input Bar -->
+        <div class="detect-input-wrapper">
+            <div class="input-glow-ring"></div>
+            <div class="detect-bar" id="detectBar">
+                <div class="detect-bar-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="7" stroke="#C9A84C" stroke-width="1.5"/>
+                        <path d="M20 20l-3-3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <input
+                    type="text"
+                    id="verseInput"
+                    placeholder="e.g.  vasudeva sutam devam ..."
+                    spellcheck="false"
+                    autocomplete="off"
+                    aria-label="Sanskrit verse input"
+                >
+                <button id="detectBtn" class="detect-btn" aria-label="Detect Chandas">
+                    <span class="detect-btn-text">Detect</span>
+                    <span class="detect-btn-arrow">→</span>
+                </button>
+            </div>
+            <p class="detect-hint">Enter transliterated Sanskrit or IAST · Press <kbd>Enter</kbd> or click Detect</p>
+        </div>
+
+        <!-- ── LOADING ── -->
+        <div id="loading" class="loading-wrap hidden">
+            <div class="loading-orb"></div>
+            <div class="loading-text">
+                <span>S</span><span>c</span><span>a</span><span>n</span><span>n</span><span>i</span><span>n</span><span>g</span>
+                <span>&nbsp;</span>
+                <span>P</span><span>r</span><span>o</span><span>s</span><span>o</span><span>d</span><span>y</span>
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+
+        <!-- ── RESULTS ── -->
+        <div id="results" class="results-cinema hidden">
+
+            <!-- Step 1 — Syllable Breakdown -->
+            <div class="result-step" data-step="1">
+                <div class="step-header">
+                    <div class="step-badge">01</div>
+                    <div class="step-meta">
+                        <h3 class="step-title">Syllable Segmentation</h3>
+                        <p class="step-desc">Each phoneme of the verse is parsed and isolated into individual syllabic units.</p>
+                    </div>
+                </div>
+                <div id="syllableList" class="pill-row"></div>
+            </div>
+
+            <!-- Step 2 — Weight Pattern -->
+            <div class="result-step" data-step="2">
+                <div class="step-header">
+                    <div class="step-badge">02</div>
+                    <div class="step-meta">
+                        <h3 class="step-title">Metrical Weight (ल / ग)</h3>
+                        <p class="step-desc">Syllables are classified as <strong>ल (Laghu · Light)</strong> or <strong>ग (Guru · Heavy)</strong> using Sandhi and Gurutva rules from Pingala's Chandashastra.</p>
+                    </div>
+                </div>
+                <div id="patternList" class="weight-row"></div>
+                <div class="weight-legend">
+                    <div class="legend-item">
+                        <div class="legend-swatch laghu-swatch">ल</div>
+                        <span>Laghu — Short vowel, no conjunct follows</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-swatch guru-swatch">ग</div>
+                        <span>Guru — Long vowel OR followed by conjunct consonants</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 — Meter Match -->
+            <div class="result-step result-step--final" data-step="3">
+                <div class="step-header">
+                    <div class="step-badge gold-badge">03</div>
+                    <div class="step-meta">
+                        <h3 class="step-title">Chandas Identification</h3>
+                        <p class="step-desc">The extracted pattern is compared against the canonical meters from classical tradition.</p>
+                    </div>
+                </div>
+                <div class="final-match-card">
+                    <div class="match-card-glow"></div>
+                    <p class="match-card-eyebrow">Detected Meter</p>
+                    <h2 id="detectedName" class="match-card-title">—</h2>
+                    <div class="match-card-divider"></div>
+                    <p id="meterDesc" class="match-card-rule"></p>
+                    <div id="patternReadout" class="match-card-pattern"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════ -->
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="about-col-text">
+                <p class="section-eyebrow">ᛋ&nbsp; The Science &nbsp;ᛋ</p>
+                <h2 class="section-title">Rooted in<br><em>2500 Years</em><br>of Scholarship</h2>
+                <p class="about-body">The science of Sanskrit meter — <strong>Chandashastra</strong> — was systematised by the sage <strong>Pingala</strong> around 300 BCE in his foundational work, the <em>Chandaḥśāstra</em>. Every rhyme, every stanza in sacred texts like the Rigveda and Mahabharata obeys strict metrical rules. ChandaLGx reconstructs that ancient logic in silicon.</p>
+            </div>
+            <div class="about-col-cards">
+                <div class="about-card">
+                    <span class="about-card-icon">⚡</span>
+                    <h4>Precision Parsing</h4>
+                    <p>High-accuracy syllabification including Anusvara, Visarga, and conjunct consonant rules.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-icon">🏛</span>
+                    <h4>Classical Rules</h4>
+                    <p>Pattern matching derived directly from Pingala's canonical Chandashastra treatise.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-icon">✦</span>
+                    <h4>Living Engine</h4>
+                    <p>Continuously expanding meter library — from simple Śloka to complex Mālinī.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         METERS REFERENCE SECTION
+    ═══════════════════════════════════════ -->
+    <section id="meters" class="meters-section">
+        <div class="section-header">
+            <p class="section-eyebrow">ᛋ&nbsp; Reference Library &nbsp;ᛋ</p>
+            <h2 class="section-title">Supported Meters</h2>
+        </div>
+        <div class="meters-grid">
+            <div class="meter-card" onclick="fillVerse('vasudeva sutam devam')">
+                <div class="meter-card-num">॥ १ ॥</div>
+                <h3 class="meter-card-name">Anushtubh</h3>
+                <p class="meter-card-sub">अनुष्टुभ्</p>
+                <p class="meter-card-info">8 syllables · 5th Laghu, 6th Guru</p>
+                <span class="meter-card-try">Try sample →</span>
+            </div>
+            <div class="meter-card" onclick="fillVerse('indra vajra samam pada')">
+                <div class="meter-card-num">॥ २ ॥</div>
+                <h3 class="meter-card-name">Indravajra</h3>
+                <p class="meter-card-sub">इन्द्रवज्रा</p>
+                <p class="meter-card-info">11 syllables · G G L G G L L G L G G</p>
+                <span class="meter-card-try">Try sample →</span>
+            </div>
+            <div class="meter-card" onclick="fillVerse('upendra vajra lalita')">
+                <div class="meter-card-num">॥ ३ ॥</div>
+                <h3 class="meter-card-name">Upendravajra</h3>
+                <p class="meter-card-sub">उपेन्द्रवज्रा</p>
+                <p class="meter-card-info">11 syllables · L G L G G L L G L G G</p>
+                <span class="meter-card-try">Try sample →</span>
+            </div>
+            <div class="meter-card meter-card--dim">
+                <div class="meter-card-num">॥ ४ ॥</div>
+                <h3 class="meter-card-name">Vasantatilaka</h3>
+                <p class="meter-card-sub">वसन्ततिलका</p>
+                <p class="meter-card-info">14 syllables · G G L G L L L G L L G G L G</p>
+                <span class="meter-card-try">Coming soon</span>
+            </div>
+            <div class="meter-card meter-card--dim">
+                <div class="meter-card-num">॥ ५ ॥</div>
+                <h3 class="meter-card-name">Mālinī</h3>
+                <p class="meter-card-sub">मालिनी</p>
+                <p class="meter-card-info">15 syllables · L L L L L L G G L G L G G</p>
+                <span class="meter-card-try">Coming soon</span>
+            </div>
+            <div class="meter-card meter-card--dim">
+                <div class="meter-card-num">॥ ६ ॥</div>
+                <h3 class="meter-card-name">Śārdūlavikrīḍita</h3>
+                <p class="meter-card-sub">शार्दूलविक्रीडित</p>
+                <p class="meter-card-info">19 syllables · Complex samagaṇa</p>
+                <span class="meter-card-try">Coming soon</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <span class="footer-logo-text">ChandaLGx</span>
+                <p class="footer-tagline">Ancient Rhythm. Modern Precision.</p>
+            </div>
+            <div class="footer-om">ॐ</div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-row">
+                <p>छन्दःशास्त्र · Based on Pingala's <em>Chandaḥśāstra</em> · Luxury Edition</p>
+                <p class="footer-copy">&copy; 2026 ChandaLGx. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════ -->
+    <script src="detector.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
