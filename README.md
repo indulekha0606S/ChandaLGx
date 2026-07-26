@@ -1,78 +1,120 @@
-# ChandaLGx 🪶 — Sanskrit Prosody Intelligence
+# ChandaLGX
 
-> **The Advanced Sanskrit Chandas (Meter) Detection Engine & Visualizer**
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![License](https://img.shields.io/github/license/indulekha0606S/ChandaLGx)
+![Last Commit](https://img.shields.io/github/last-commit/indulekha0606S/ChandaLGx)
+![Stars](https://img.shields.io/github/stars/indulekha0606S/ChandaLGx?style=social)
+![Forks](https://img.shields.io/github/forks/indulekha0606S/ChandaLGx?style=social)
 
-[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+An AI-powered Kannada Chandas (meter) detection system that leverages **Natural Language Processing (NLP)** and **Machine Learning** to analyze Kannada poetry and accurately identify its metrical pattern (Chandas).
 
-**ChandaLGx** is a high-precision engine and interactive web application designed to analyze Sanskrit verses (Shlokas), compute syllable weights (**Laghu** `l` / **Guru** `G`), perform Gana breakdown, and accurately identify classical Sanskrit meters (*Chandas*) such as **Anushtubh**, **Indravajra**, **Upendravajra**, **Upajati**, and more.
-
----
-
-## ✨ Features
-
-- **⚡ Instant Meter Detection**: Automatically detects meters across classical Sanskrit poetry formats.
-- **📜 Multi-Script Support**: Accepts inputs in **Devanagari**, **IAST** (International Alphabet of Sanskrit Transliteration), and standard **ASCII** transliteration.
-- **⚖️ Advanced Prosody Rule Engine (v2.0)**:
-  - **Vowel Length Analysis**: Differentiates short vowels (`a, i, u, ṛ, ḷ`) and long vowels (`ā, ī, ū, e, ai, o, au`).
-  - **Aspirated Digraphs**: Correctly handles 2-character Roman consonants (`kh, gh, ch, jh, th, dh, ph, bh, sh`) as single consonants.
-  - **Anusvara & Visarga Weighting**: Accurately evaluates Guru weight additions from Anusvara (ं / `ṃ`) and Visarga (ः / `ḥ`).
-  - **Conjunct & Sandhi Dynamics**: Evaluates syllable weight shifts before conjunct consonants across words.
-- **📊 Gana & Syllable Breakdown**: Visualizes Laghu/Guru sequences and Gana groupings (Ya, Ma, Ta, Ra, Ja, Bha, Na, Sa).
-- **🎨 Premium UI & Interactive Visualizer**: Modern interface built with clean typography, smooth animations, and dynamic responsive layouts.
+Developed with the goal of preserving and promoting Kannada literary heritage, ChandaLGX combines traditional linguistic concepts with modern AI techniques to provide fast, reliable, and user-friendly Chandas classification.
 
 ---
 
-## 🛠️ Project Structure
+## 🚧 Status & Version
 
+* **Status:** 🚧 Actively under development
+* **Current Version:** `v1.0.0`
+
+---
+
+## Features
+
+* Automatic Kannada Chandas detection
+* Machine Learning-based prediction
+* Efficient text preprocessing pipeline
+* Easy-to-use interface
+* Scalable architecture for future Chandas support
+* Designed for students, researchers, and literature enthusiasts
+
+---
+
+## Tech Stack
+
+**Programming Language**
+
+* Python
+
+**Libraries & Frameworks**
+
+* Pandas
+* NumPy
+* Scikit-learn
+
+**Concepts**
+
+* Machine Learning
+* Natural Language Processing (NLP)
+* Text Classification
+* Feature Engineering
+
+---
+
+## Project Structure
+
+```text
+ChandaLGX/
+│
+├── data/
+├── models/
+├── src/
+├── assets/
+├── app.py
+├── requirements.txt
+├── README.md
+└── LICENSE
 ```
-ChandaLGx/
-├── index.html     # Main application UI layout
-├── style.css      # Design system & responsive styling
-├── detector.js    # ChandaLGx Core Prosody Engine (v2.0 logic)
-├── app.js         # UI interactions, DOM binding, & result rendering
-└── README.md      # Project documentation
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/indulekha0606S/ChandaLGx.git
+
+cd ChandaLGx
+
+pip install -r requirements.txt
 ```
 
 ---
 
-## 🚀 Getting Started
+## Usage
 
-### Running Locally
-No complex installation or server setup required! Simply clone or download the repository and open `index.html` in any web browser:
+Run the application:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/indulekha0606S/ChandaLGx.git
-   ```
-2. Navigate into the directory:
-   ```bash
-   cd ChandaLGx
-   ```
-3. Open `index.html` in your browser.
+```bash
+python app.py
+```
 
 ---
 
-## 📚 Supported Meters (Examples)
+## Future Enhancements
 
-| Meter (छन्दस्) | Syllables / Quarter | Pattern & Characteristics |
-| :--- | :---: | :--- |
-| **Anushtubh (अनुष्टुभ्)** | 8 | 5th syllable Laghu, 6th Guru in each quarter |
-| **Indravajra (इन्द्रवज्रा)** | 11 | Pattern: Ta - Ta - Ja - Ga - Ga |
-| **Upendravajra (उपेन्द्रवज्रा)** | 11 | Pattern: Ja - Ta - Ja - Ga - Ga |
-| **Upajati (उपजाति)** | 11 | Combination of Indravajra and Upendravajra quarters |
-
----
-
-## 💻 Tech Stack
-
-- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System & Tokens)
-- **Engine**: Pure JavaScript (ES6+ Class-based Prosody Rule Engine)
-- **Deployment**: Vercel
-- **Typography**: Google Fonts (Cinzel, Cormorant Garamond, Inter)
+* Support additional Kannada Chandas
+* Improve model accuracy
+* Web deployment
+* REST API integration
+* Explainable AI (XAI) for predictions
 
 ---
 
-## 📄 License
+## Team
 
-This project is open-source and available under the [MIT License](LICENSE).
+* **Indulekha S**
+* **Team Code Bug**
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Connect
+
+**Portfolio:** [https://indulekhas-portfolio.netlify.app/](https://indulekhas-portfolio.netlify.app/)
+
+**LinkedIn:** [https://www.linkedin.com/in/indulekha-s-481026395/](https://www.linkedin.com/in/indulekha-s-481026395/)
