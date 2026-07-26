@@ -110,11 +110,3 @@ python app.py
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Connect
-
-**Portfolio:** [https://indulekhas-portfolio.netlify.app/](https://indulekhas-portfolio.netlify.app/)
-
-**LinkedIn:** [https://www.linkedin.com/in/indulekha-s-481026395/](https://www.linkedin.com/in/indulekha-s-481026395/)
