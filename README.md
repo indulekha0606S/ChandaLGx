@@ -2,6 +2,9 @@
 
 > **The Advanced Sanskrit Chandas (Meter) Detection Engine & Visualizer**
 
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+
 **ChandaLGx** is a high-precision engine and interactive web application designed to analyze Sanskrit verses (Shlokas), compute syllable weights (**Laghu** `l` / **Guru** `G`), perform Gana breakdown, and accurately identify classical Sanskrit meters (*Chandas*) such as **Anushtubh**, **Indravajra**, **Upendravajra**, **Upajati**, and more.
 
 ---
@@ -28,7 +31,6 @@ ChandaLGx/
 ├── style.css      # Design system & responsive styling
 ├── detector.js    # ChandaLGx Core Prosody Engine (v2.0 logic)
 ├── app.js         # UI interactions, DOM binding, & result rendering
-├── upload.bat     # Deployment helper script
 └── README.md      # Project documentation
 ```
 
@@ -66,6 +68,7 @@ No complex installation or server setup required! Simply clone or download the r
 
 - **Frontend**: HTML5, Vanilla CSS3 (Custom Design System & Tokens)
 - **Engine**: Pure JavaScript (ES6+ Class-based Prosody Rule Engine)
+- **Deployment**: Vercel
 - **Typography**: Google Fonts (Cinzel, Cormorant Garamond, Inter)
 
 ---
