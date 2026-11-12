@@ -103,6 +103,7 @@ python app.py
 ## Team
 
 * **Indulekha S**
+* **Fathima Khan**
 * **Team Code Bug**
 
 ---
